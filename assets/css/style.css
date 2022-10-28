@@ -1,0 +1,329 @@
+/* ROOT STYLING FOR ALL */
+:root {
+    --black: black;
+    --grey: grey;
+    --accent: rgb(224, 109, 33);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER NAV STYLING */
+header {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav {
+    margin: 20px;
+}
+
+header nav ul li a {
+    padding: 8px;
+    font-size: 28px;
+    margin: 20px 20px 0 0;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* HEADER/NAV STYLING */
+
+/* TITLE CUSTOM STYLING */
+.title {
+    border-right: 5px solid var(--accent);
+    text-align: right;
+    min-height: 100%;
+    padding-right: 40px;
+    min-width: 20%;
+    max-width: 20%;
+}
+
+.title h2 {
+    font-size: 48px;
+}
+
+/* END TITLE STYLING */
+
+.sub-heading {
+    color: white;
+    font-size: 30px;
+}
+
+/* HERO STYLING */
+.hero {
+    background-image: url("../images/coding.jpg");
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero img {
+    height: 300px;
+}
+
+/* END HERO STYLING */
+
+/* BODY STYLING */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--black);
+    background-color: var(--grey);
+}
+
+/* END BODY STYING */
+
+/* ABOUT ME STYLING */
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 30px;
+}
+
+.about-me p {
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 1.6;
+    width: 90%;
+}
+
+/* END ABOUT ME */
+
+/* WORK STYLING  */
+.my-work {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+}
+
+.my-work h2 {
+    color: var(--grey);
+}
+
+.projects-wrapper {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.project {
+    border: solid;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.project:hover {
+    opacity: .5;
+}
+
+.project1 {
+    background-image: url("../images/cards.jpg");
+    grid-column: 1/3;
+    grid-row: span 2;
+
+}
+
+.project2 {
+    background-image: url("../images/robot.jpg");
+}
+
+.project3 {
+    background-image: url("../images/words.jpg");
+}
+
+.project4 {
+    background-image: url("../images/puzzle.jpg");
+}
+
+.project5 {
+    background-image: url("../images/chess.jpg");
+}
+
+.project-label {
+    background-color: white;
+    color: var(--black);
+    padding: 10px;
+}
+
+/* END WORK STYLING */
+
+/* CONTACT ME NAV */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-list {
+    width: 80%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 8px;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    color: var(--accent);
+}
+
+/* END CONTACT ME NAV */
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+    .hero .quote {
+        font-size: 28px;
+        padding-right: 20px;
+    }
+
+    .hero .quote #quote-text {
+        font-size: 35px;
+    }
+
+    .title h2 {
+        font-size: 35px;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    header nav ul {
+        min-height: 80px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .title {
+        border-bottom: 5px solid var(--accent);
+        border-right: none;
+        text-align: center;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .my-work {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .projects-wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .projects-grid {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        width: 100%;
+    }
+
+    footer ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
+/* END MEDIA QUERY */
