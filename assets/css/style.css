@@ -164,18 +164,18 @@ body {
 }
 
 .project1 {
-    background-image: url("../images/smarttraveler.jpg");
+    background-image: url("../images/gamersRealmSS.png");
     grid-column: 1/3;
     grid-row: span 2;
 
 }
 
 .project2 {
-    background-image: url("../images/workdayscheduler.jpg");
+    background-image: url("../images/smarttraveler.jpg");
 }
 
 .project3 {
-    background-image: url("../images/comingsoon.jpg");
+    background-image: url("../images/workdayscheduler.jpg");
 }
 
 .project4 {
